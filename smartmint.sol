@@ -21,8 +21,6 @@ contract NFTCollectible is ERC721Enumerable, Ownable {
     constructor(string memory baseURI) ERC721("NFT Collectible", "NFTC") {
         setBaseURI(baseURI);
     }
-
-    
     
     function reserveNFTs() public onlyOwner {
         uint totalMinted = _tokenIds.current();
